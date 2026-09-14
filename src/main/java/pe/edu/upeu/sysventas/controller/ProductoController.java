@@ -17,8 +17,10 @@ private final IProductoService ps;
 private final IUnidadMedidaService ums;
 
 @FXML ComboBox<ComboBoxOption> cbxTipoProducto;
+    @FXML ComboBox<ComboBoxOption> cbxCategoria;
 @FXML public void initialize(){
     System.out.println("Holass");
     cbxTipoProducto.getItems().addAll(ps.ListarTipoProducto());
+    //cbxCategoria.getItems().addAll(cs.());
 }
 }

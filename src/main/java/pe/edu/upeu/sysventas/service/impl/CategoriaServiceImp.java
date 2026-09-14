@@ -1,9 +1,12 @@
 package pe.edu.upeu.sysventas.service.impl;
 
+import pe.edu.upeu.sysventas.dto.ComboBoxOption;
 import pe.edu.upeu.sysventas.model.Categoria;
 import pe.edu.upeu.sysventas.repository.CategoriaRepository;
 import pe.edu.upeu.sysventas.repository.ICrudGenericoRepository;
 import pe.edu.upeu.sysventas.service.ICategoriaService;
+
+import java.util.List;
 
 public class CategoriaServiceImp extends CrudGenericoServiceImp<Categoria, Long> implements ICategoriaService {
 
@@ -18,4 +21,8 @@ public class CategoriaServiceImp extends CrudGenericoServiceImp<Categoria, Long>
         return categoriaRepository;
     }
 
+    @Override
+    public List<ComboBoxOption> ListarTipoProducto() {
+        return List.of();
+    }
 }
