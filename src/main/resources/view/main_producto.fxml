@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="miContenedor"
+        xmlns="http://javafx.com/javafx/17.0.12"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="pe.edu.upeu.sysventas.controller.ProductoController">
+
+    <children>
+
+        <VBox
+                layoutX="14.0"
+                layoutY="14.0"
+                AnchorPane.bottomAnchor="5.0"
+                AnchorPane.leftAnchor="5.0"
+                AnchorPane.rightAnchor="5.0"
+                AnchorPane.topAnchor="5.0">
+
+            <children>
+
+                <HBox
+                        alignment="CENTER_LEFT"
+                        spacing="10.0">
+
+                    <children>
+
+                        <Label
+                                text="Gestionar Productos"
+                                textFill="#1d12e8">
+
+                            <font>
+                                <Font
+                                        name="System Bold"
+                                        size="20.0"/>
+                            </font>
+
+                        </Label>
+
+                        <Label
+                                text="Filtrar Productos"
+                                textFill="#1205c9"/>
+
+                        <TextField
+                                fx:id="txtFiltroDato"
+                                prefWidth="180.0"
+                                promptText="¿Qué deseas buscar?"/>
+
+                        <Button
+                                mnemonicParsing="false"
+                                onAction="#buscarProducto"
+                                text="Buscar"
+                                textFill="#f21111"/>
+                    </children>
+
+                    <padding>
+                        <Insets
+                                bottom="10.0"
+                                left="5.0"
+                                right="5.0"
+                                top="5.0"/>
+                    </padding>
+
+                </HBox>
+
+                <HBox
+                        maxHeight="1.7976931348623157E308"
+                        spacing="15.0"
+                        VBox.vgrow="ALWAYS">
+
+                    <children>
+
+                        <AnchorPane
+                                prefWidth="430.0">
+
+                            <children>
+
+                                <GridPane
+                                        layoutY="5.0"
+                                        hgap="5.0"
+                                        vgap="5.0"
+                                        AnchorPane.leftAnchor="5.0"
+                                        AnchorPane.rightAnchor="5.0">
+
+                                    <columnConstraints>
+
+                                        <ColumnConstraints
+                                                hgrow="SOMETIMES"
+                                                minWidth="10.0"
+                                                prefWidth="110.0"/>
+
+                                        <ColumnConstraints
+                                                hgrow="SOMETIMES"
+                                                minWidth="10.0"
+                                                prefWidth="110.0"/>
+
+                                        <ColumnConstraints
+                                                hgrow="SOMETIMES"
+                                                minWidth="10.0"
+                                                prefWidth="100.0"/>
+
+                                        <ColumnConstraints
+                                                hgrow="SOMETIMES"
+                                                minWidth="10.0"
+                                                prefWidth="100.0"/>
+
+                                    </columnConstraints>
+
+                                    <rowConstraints>
+
+                                        <RowConstraints
+                                                minHeight="10.0"
+                                                prefHeight="30.0"/>
+
+                                        <RowConstraints
+                                                minHeight="10.0"
+                                                prefHeight="30.0"/>
+
+                                        <RowConstraints
+                                                minHeight="10.0"
+                                                prefHeight="30.0"/>
+
+                                        <RowConstraints
+                                                minHeight="10.0"
+                                                prefHeight="30.0"/>
+
+                                        <RowConstraints
+                                                minHeight="10.0"
+                                                prefHeight="30.0"/>
+
+                                        <RowConstraints
+                                                minHeight="10.0"
+                                                prefHeight="30.0"/>
+
+                                        <RowConstraints
+                                                minHeight="10.0"
+                                                prefHeight="30.0"/>
+
+                                        <RowConstraints
+                                                minHeight="10.0"
+                                                prefHeight="30.0"/>
+
+                                        <RowConstraints
+                                                minHeight="10.0"
+                                                prefHeight="30.0"/>
+
+                                        <RowConstraints
+                                                minHeight="10.0"
+                                                prefHeight="35.0"/>
+
+                                    </rowConstraints>
+
+                                    <children>
+
+                                        <Label
+                                                alignment="CENTER"
+                                                text="Formulario de Registro"
+                                                GridPane.columnSpan="4">
+
+                                            <font>
+                                                <Font
+                                                        name="System Bold"
+                                                        size="15.0"/>
+                                            </font>
+
+                                        </Label>
+
+                                        <Label
+                                                text="Tipo Producto"
+                                                GridPane.rowIndex="1"/>
+
+                                        <ComboBox
+                                                fx:id="cbxTipoProducto"
+                                                maxWidth="1.7976931348623157E308"
+                                                GridPane.columnIndex="1"
+                                                GridPane.columnSpan="3"
+                                                GridPane.rowIndex="1"/>
+
+                                        <Label
+                                                text="Nombre Producto"
+                                                GridPane.rowIndex="2"/>
+
+                                        <TextField
+                                                fx:id="txtNombreProducto"
+                                                maxWidth="1.7976931348623157E308"
+                                                GridPane.columnIndex="1"
+                                                GridPane.columnSpan="3"
+                                                GridPane.rowIndex="2"/>
+
+                                        <Label
+                                                text="P. Unit"
+                                                GridPane.rowIndex="3"/>
+
+                                        <TextField
+                                                fx:id="txtPUnit"
+                                                GridPane.columnIndex="1"
+                                                GridPane.rowIndex="3"/>
+
+                                        <Label
+                                                text="P. Unit Old"
+                                                GridPane.columnIndex="2"
+                                                GridPane.rowIndex="3"/>
+
+                                        <TextField
+                                                fx:id="txtPUnitOld"
+                                                GridPane.columnIndex="3"
+                                                GridPane.rowIndex="3"/>
+
+                                        <Label
+                                                text="Utilidad"
+                                                GridPane.rowIndex="4"/>
+
+                                        <TextField
+                                                fx:id="txtUtilidad"
+                                                GridPane.columnIndex="1"
+                                                GridPane.rowIndex="4"/>
+
+                                        <Label
+                                                text="Stock"
+                                                GridPane.rowIndex="5"/>
+
+                                        <TextField
+                                                fx:id="txtStock"
+                                                GridPane.columnIndex="1"
+                                                GridPane.rowIndex="5"/>
+
+                                        <Label
+                                                text="Stock Old"
+                                                GridPane.columnIndex="2"
+                                                GridPane.rowIndex="5"/>
+
+                                        <TextField
+                                                fx:id="txtStockOld"
+                                                GridPane.columnIndex="3"
+                                                GridPane.rowIndex="5"/>
+
+                                        <Label
+                                                text="Categoria"
+                                                GridPane.rowIndex="6"/>
+
+                                        <ComboBox
+                                                fx:id="cbxCategoria"
+                                                maxWidth="1.7976931348623157E308"
+                                                GridPane.columnIndex="1"
+                                                GridPane.columnSpan="3"
+                                                GridPane.rowIndex="6"/>
+
+                                        <Label
+                                                text="Marca"
+                                                GridPane.rowIndex="7"/>
+
+                                        <ComboBox
+                                                fx:id="cbxMarca"
+                                                maxWidth="1.7976931348623157E308"
+                                                GridPane.columnIndex="1"
+                                                GridPane.columnSpan="3"
+                                                GridPane.rowIndex="7"/>
+
+                                        <Label
+                                                text="Unidad Medida"
+                                                GridPane.rowIndex="8"/>
+
+                                        <ComboBox
+                                                fx:id="cbxUnidMedida"
+                                                maxWidth="1.7976931348623157E308"
+                                                GridPane.columnIndex="1"
+                                                GridPane.columnSpan="3"
+                                                GridPane.rowIndex="8"/>
+
+                                        <Button
+                                                fx:id="btnGuardar"
+                                                mnemonicParsing="false"
+                                                onAction="#validarFormulario"
+                                                text="Guardar"
+                                                GridPane.columnIndex="1"
+                                                GridPane.rowIndex="9"/>
+
+                                        <Button
+                                                fx:id="btnCancelar"
+                                                mnemonicParsing="false"
+                                                onAction="#clearForm"
+                                                text="Cancelar"
+                                                GridPane.columnIndex="2"
+                                                GridPane.rowIndex="9"/>
+
+                                    </children>
+
+                                    <padding>
+                                        <Insets
+                                                left="5.0"
+                                                right="5.0"/>
+                                    </padding>
+
+                                </GridPane>
+
+                            </children>
+
+                        </AnchorPane>
+
+                        <AnchorPane
+                                prefWidth="600.0"
+                                HBox.hgrow="ALWAYS">
+
+                            <children>
+
+                                <Label
+                                        fx:id="lbnMsg"
+                                        layoutX="10.0"
+                                        layoutY="5.0"
+                                        text=""/>
+
+                                <TableView
+                                        fx:id="tableView"
+                                        layoutY="30.0"
+                                        AnchorPane.bottomAnchor="5.0"
+                                        AnchorPane.leftAnchor="5.0"
+                                        AnchorPane.rightAnchor="5.0"
+                                        AnchorPane.topAnchor="30.0"/>
+
+                            </children>
+
+                        </AnchorPane>
+
+                    </children>
+
+                </HBox>
+
+            </children>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>
